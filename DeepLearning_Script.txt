@@ -1,0 +1,29 @@
+# this part is optional
+# install pip3 for python3.5
+sudo apt update
+sudo apt install python3-pip
+# install ssh
+sudo apt update
+sudo apt install openssh-server
+
+
+# install cuda first
+# get the cuda-8.0 deb file and cd into directory
+sudo dpkg -i cuda-repo-ubuntu1404-8-0-local_8.0.44-1_amd64-2.deb
+sudo apt-get update
+sudo apt install cuda
+sudo reboot
+
+sudo gedit ~/.bashrc : 
+# add this two line into it
+# in /usr/local you will see "cuda" and "cuda-8.0" is the same, so both is OK
+export PATH=/usr/local/cuda-8.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
+
+
+# install cudnn
+# unzip the cudnn tar file
+cd cuda
+sudo cp lib64/* /usr/local/cuda/lib64/
+sudo cp include/cudnn.h /usr/local/cuda/include/ 
+

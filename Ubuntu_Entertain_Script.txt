@@ -1,0 +1,28 @@
+# install oh my zsh
+sudo apt install zsh
+sudo chzh -s /usr/local/zsh
+sudo reboot
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+
+# install unity tweak tool
+sudo apt install unity-tweak-tool
+# set themes and tweak style like magic close window effect
+
+# install plank
+sudo apt install plank
+
+# install cmatrix to zhuangbi
+sudo apt install cmatrix
+cmatrix -b
+
+# install sl to see a train
+sudo apt install sl
+sl
+
+# install start wars in terminal
+telnet towel.blinkenlights.nl
+
+# install xswipe
+
+

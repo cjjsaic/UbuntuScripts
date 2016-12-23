@@ -1,0 +1,19 @@
+# install fcitx and sougou input Chinese input
+sudo add-apt-repository ppa:fcitx-team/nightly  
+sudo apt update
+sudo apt install fcitx
+sudo apt -f install
+sudo apt install fcitx-config-gtk 
+sudo apt install fcitx-table-all
+sudo apt install im-switch
+
+# after install fcitx you must add it into autostart with system, otherwise it won't work
+# to do this super type session clik "start applications" add fcitx-autostart commond
+sudo apt install fcitx-googlepinyin
+# googlepinyin is very nice!
+
+# install google chrome browser
+sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
+sudo apt update
+sudo apt install google-chrome-stable
