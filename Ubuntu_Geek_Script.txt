@@ -28,5 +28,10 @@ sudo chzh -s /usr/local/zsh
 sudo reboot
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# 安装ss-qt5，翻墙必备
+sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+
 
 
