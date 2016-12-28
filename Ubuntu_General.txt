@@ -17,3 +17,12 @@ sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.li
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
 sudo apt update
 sudo apt install google-chrome-stable
+
+# setup themes
+# install icons
+sudo add-apt-repository ppa:noobslab/icons
+sudo apt-get update
+sudo apt-get install ultra-flat-icons
+# install Flat theme
+wget https://github.com/anmoljagetia/Flatabulous/releases/download/16.04.1/Flatabulous-Theme.deb
+sudo dpkg -i Flatabulous-Theme.deb
