@@ -34,4 +34,38 @@ sudo apt-get update
 sudo apt-get install shadowsocks-qt5
 
 
+# install opencv2
+sudo apt update
+# install openGL first
+sudo apt-get install build-essential libgl1-mesa-dev
+sudo apt-get install freeglut3-dev
+sudo apt-get install libglew-dev libsdl2-dev libsdl2-image-dev libglm-dev libfreetype6-dev
+# install all other library for opencv
+sudo apt-get install build-essential libgtk2.0-dev libjpeg-dev libjasper-dev libopenexr-dev cmake python-dev python-numpy python-tk libtbb-dev libeigen3-dev yasm libfaac-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev libqt4-dev libqt4-opengl-dev sphinx-common texlive-latex-extra libv4l-dev libdc1394-22-dev libavcodec-dev libavformat-dev libswscale-dev default-jdk ant libvtk5-qt4-dev libgl1-mesa-dev libglu1-mesa-dev
+wget http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.10/opencv-2.4.10.zip?r=http%3A%2F%2Fopencv.org%2Fdownloads.html&ts=1482827387&use_mirror=nchc
+
+cd opencv2.4.10
+mkdir build
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_PYTHON_EXAMPLES=ON -D PYTHON_EXECUTABLE=/usr/bin/python -D CUDA_GENERATION=Kepler BUILD_EXAMPLES=ON  ..
+
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_PYTHON_EXAMPLES=ON -D PYTHON_EXECUTABLE=/usr/bin/python -D WITH_CUDA=OFF BUILD_EXAMPLES=ON  ..
+# becareful that if WITH_CUDA is on, then if your cuda was not properlly installed it will got error.
+make -j
+sudo make install
+# becarefule DONOT install opencv2.13 it seems that version has a bug!!!!
+# if using opencv2 ,just install 2.10!!
+
+# install sublime
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update 
+sudo apt-get install sublime-text-installer
+
+## nemo file explorer
+sudo add-apt-repository ppa:webupd8team/nemo
+sudo apt-get update
+sudo apt-get install nemo nemo-fileroller
+安装完成，你可以设置Nemo作为默认的文件管理器，利用该oneliner：
+gsettings set org.gnome.desktop.background show-desktop-icons false
+xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
+
 

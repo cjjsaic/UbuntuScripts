@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo pip3 install keras
+echo -e "\033[42;30;5m                         This a colorful shell test                        "
