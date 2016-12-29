@@ -46,9 +46,59 @@ cd ..
 sudo rm -r build
 sudo rm -r /usr/local/include/opencv2 /usr/local/include/opencv /usr/include/opencv /usr/include/opencv2 /usr/local/share/opencv /usr/local/share/OpenCV /usr/share/opencv /usr/share/OpenCV /usr/local/bin/opencv* /usr/local/lib/libopencv
 
+# install opencv3.1
+sudo apt-get install --assume-yes build-essential cmake cmake-gui checkinstall git libgtk2.0-dev pkg-config python-dev libboost-all-dev  libdc1394-22 libdc1394-22-dev libjpeg-dev libpng12-dev libtiff5-dev libjasper-dev libavcodec-dev libavformat-dev libswscale-dev libxine2-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libv4l-dev libtbb-dev libqt4-dev libfaac-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev x264 v4l-utils unzip ffmpeg libgtk-3-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev qtbase5-dev yasm
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D  WITH_V4L=ON -D WITH_QT=ON -D WITH_OPENGL=ON -D CUDA_NVCC_FLAGS="-D_FORCE_INLINES" ..
+
 # install caffe
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-seria
 sudo apt-get install --no-install-recommends libboost-all-dev
 sudo apt-get install libopenblas-dev liblapack-dev libatlas-base-dev
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
 sudo apt-get install --no-install-recommends libboost-all-dev
+
+sudo apt-get install build-essential python-dev python-setuptools libboost-python-dev libboost-thread-dev -y
+# change Makefile.config this line 
+INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
+LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/hdf5/serial
+
+# on ubuntu16.04 there may be some problem
+find . -type f -exec sed -i -e 's^"hdf5.h"^"hdf5/serial/hdf5.h"^g' -e 's^"hdf5_hl.h"^"hdf5/serial/hdf5_hl.h"^g' '{}' \;
+cd /usr/lib/x86_64-linux-gnu
+sudo ln -s libhdf5_serial.so.10.1.0 libhdf5.so
+sudo ln -s libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so
+cd ~/caffe/python
+for req in $(cat requirements.txt); do pip install $req; done
+# subl Makefile replace this line:
+
+NVCCFLAGS += -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)
+# with the following line
+
+NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)
+
+# official caffe on ubuntu16.04
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y build-essential cmake git pkg-config
+sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
+sudo apt-get install -y libatlas-base-dev 
+sudo apt-get install -y --no-install-recommends libboost-all-dev
+sudo apt-get install -y libgflags-dev libgoogle-glog-dev liblmdb-dev
+
+# (Python general)
+sudo apt-get install -y python-pip
+
+# (or, Python 3.5 development files)
+sudo apt-get install -y python3-dev
+sudo apt-get install -y python3-numpy python3-scipy
+
+# manual install protobuf 3.1.0
+# uninstall old protobuf first
+sudo apt-get autoremove libprotobuf-dev
+cd protobuf-3.1.0
+sudo apt install autoconf automake libtool curl
+./autogen.sh
+./configure --prefix=/usr CC=/usr/bin/gcc 
+
+
+
