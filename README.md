@@ -1,6 +1,7 @@
 # Setup theme like Mac
 -------------------------
 # setup themes
+# Install unity tweak tools first
 # install icons
 ```
 sudo add-apt-repository ppa:noobslab/icons
@@ -16,3 +17,6 @@ sudo dpkg -i Flatabulous-Theme.deb
 ```
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
 ```
+
+# setting
+Just select Flat theme in tweaktools
