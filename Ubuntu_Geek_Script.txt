@@ -114,5 +114,6 @@ FCCC7561 8A4A1741 68FA4223 ADCEDE07
 # install anaconda 
 # first install pakagecontroller and then install anaconda
 # then edit the anaconda default setting file set python path as interpriter then you can use sublime as python ide!
+# install Material Theme & OmniMarkDownPreviewer
 
 
