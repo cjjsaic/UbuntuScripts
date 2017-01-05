@@ -21,6 +21,6 @@ sudo apt-get install python-pip python-dev build-essential
 sudo pip3 install --upgrade pip
 sudo pip3 install -r python/requirements.txt
 make pycaffe./data/mnist/get_mnist.sh
-./example/mnist/create_mnist.sh
-./example/mnist/train_lenet.sh
+./examples/mnist/create_mnist.sh
+./examples/mnist/train_lenet.sh
 echo "Congratulations! Enjoy caffe!"

@@ -27,5 +27,19 @@ sudo apt-get install ultra-flat-icons
 wget https://github.com/anmoljagetia/Flatabulous/releases/download/16.04.1/Flatabulous-Theme.deb
 sudo dpkg -i Flatabulous-Theme.deb
 
+# install Macbuntu theme
+sudo add-apt-repository ppa:noobslab/macbuntu
+sudo apt-get install  macbuntu-os-ithemes-lts-v7
+sudo apt-get install  macbuntu-os-icons-lts-v7
+sudo apt-get install  macbuntu-os-plank-itheme-lts-v7
+
+# install spotlight like Mac
+sudo add-apt-repository ppa:noobslab/macbuntu
+sudo apt-get update
+sudo apt-get install albert
+sudo add-apt-repository ppa:noobslab/macbuntu
+sudo apt-get update
+sudo apt-get install macbuntu-os-plank-theme-lts-v7
+
 # set dock to bottom
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
