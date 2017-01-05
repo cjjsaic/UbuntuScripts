@@ -23,7 +23,8 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libboost_python-py35.so /usr/lib/x86_64-lin
 cd ~
 git clone https://github.com/BVLC/caffe.git
 
-sudo pip3 install -r python/requirements.txt
+# for python3 don't using caffe default requirements.txt file, using my repo's
+sudo pip3 install -r python/requirements_python3.txt
 make all -j
 make pycaffe
 
