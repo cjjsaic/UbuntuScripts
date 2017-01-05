@@ -1,0 +1,2 @@
+# Fix encode problem
+iconv -f GBK -t UTF-8 zhongwen.txt > right.txt
