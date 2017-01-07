@@ -1,5 +1,4 @@
-# install pre-request
-sudo apt-get update
+# install pre-reques
 sudo apt-get upgrade
 sudo apt-get install -y build-essential cmake git pkg-config
 sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
@@ -24,7 +23,7 @@ cd ~
 git clone https://github.com/BVLC/caffe.git
 
 # for python3 don't using caffe default requirements.txt file, using my repo's
-sudo pip3 install -r python/requirements_python3.txt
+sudo pip3 install --upgrade -r python/requirements_python3.txt
 make all -j
 make pycaffe
 

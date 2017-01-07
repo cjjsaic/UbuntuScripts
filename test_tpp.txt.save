@@ -1,0 +1,63 @@
+    --newpage intro
+
+    --heading Hello World
+
+    代码：
+
+    --beginoutput
+
+    #include <stdio.h>
+
+    int main(void) {
+
+    printf("Hello World!");
+
+    return 0;
+
+    }
+
+    --endoutput
+
+--title A simple example
+
+--date 2016.01.24
+
+--bgcolor blue
+
+This is the abstract of this presentation.
+
+It may consist of zero or more lines, and may be as long as you want.
+
+--newpage agenda
+
+--heading 这里是目录
+
+  * 蔡
+
+  * 老
+
+  * 师
+
+  * 最
+
+  * 帅
+--newpage intro
+
+--heading Hello World
+
+    代码：
+
+    --beginoutput
+
+    #include <stdio.h>
+
+    int main(void) {
+
+    printf("Hello World!");
+
+    return 0;
+
+    }
+
+    --endoutput
+

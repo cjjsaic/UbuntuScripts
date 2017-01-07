@@ -1,0 +1,13 @@
+--author JinTian
+--title My Weekly Report
+--date today
+
+--heading Does Artificial Intelligence Beats Human?
+
+--newpage page1
+--
+--beginoutput
+- Answer is yes
+- Machine will be more clever
+- Human can live with AI
+--endoutput
