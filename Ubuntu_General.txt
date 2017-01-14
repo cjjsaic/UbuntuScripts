@@ -27,6 +27,13 @@ sudo apt-get install ultra-flat-icons
 wget https://github.com/anmoljagetia/Flatabulous/releases/download/16.04.1/Flatabulous-Theme.deb
 sudo dpkg -i Flatabulous-Theme.deb
 
+sudo add-apt-repository ppa:ravefinity-project/ppa
+sudo apt-get update
+sudo apt-get install vivacious-colors-gtk-dark
+sudo apt-get install vivacious-colors-gtk-light
+sudo apt-get install ultra-flat-theme
+
+
 # install Macbuntu theme
 sudo add-apt-repository ppa:noobslab/macbuntu
 sudo apt-get install  macbuntu-os-ithemes-lts-v7

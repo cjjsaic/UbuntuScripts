@@ -25,4 +25,10 @@ telnet towel.blinkenlights.nl
 
 # install xswipe
 
+# install themes
+sudo add-apt-repository ppa:ravefinity-project/ppa
+sudo apt-get update
+sudo apt-get install vivacious-colors-gtk-dark
+sudo apt-get install vivacious-colors-gtk-light
+
 
