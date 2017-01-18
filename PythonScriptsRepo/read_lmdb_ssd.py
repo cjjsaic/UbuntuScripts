@@ -29,11 +29,11 @@ for (idx, (key, value)) in enumerate(lmdb_cursor):
     print 'height:', anno_datum.datum.height
     print 'channels:', anno_datum.datum.channels
 
-    img = np.fromstring(data, dtype=np.uint8)
-    print img
+    img = cv2.imdecode(np.frombuffer(data, dtype='uint8'), 1)
+    
     print img.shape
-    # cv2.imshow('cv2.png', img)
-    # cv2.waitKey(0)
+    cv2.imshow('cv2.png', img)
+    cv2.waitKey(0)
 
     if idx >= 6:
     	break
