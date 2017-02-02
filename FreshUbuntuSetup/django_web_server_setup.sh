@@ -12,7 +12,6 @@ echo ${pip_config_file}
 
 if [ -f ${pip_config_file} ]
 then
-	sudo chmod -R 777 ${pip_dir}
 	echo "pip.cnf aleady exist."
 	:> ${pip_config_file}
 	echo "[global]" >> ${pip_config_file}
@@ -20,10 +19,8 @@ then
 	echo "[install]" >> ${pip_config_file}
 	echo "trusted-host=mirrors.aliyun.com" >> ${pip_config_file}
 else
-	sudo mkdir ${pip_dir}
-	sudo chmod -R 777 ${pip_dir}
-	sudo touch ${pip_config_file}
-	sudo chmod -R 777 ${pip_config_file}
+	mkdir ${pip_dir}
+	touch ${pip_config_file}
 	echo "[global]" >> ${pip_config_file}
 	echo "index-url = https://pypi.tuna.tsinghua.edu.cn/simple" >> ${pip_config_file}
 	echo "[install]" >> ${pip_config_file}
@@ -35,7 +32,7 @@ echo "pip conf file established success!"
 sudo apt install curl
 sudo apt install wget
 sudo apt install zsh
-sudo curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 sudo chsh -s /bin/zsh
 
 # install python3 packages
@@ -53,9 +50,9 @@ cd ~
 sudo mkdir SampleConfs
 sudo chmod -R 777 SampleConfs
 cd SampleConfs
-sudo wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_gunicorn.conf
-sudo wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_supervisor.conf
-sudo wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_nginx
+wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_gunicorn.conf
+wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_supervisor.conf
+wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_nginx
 echo "settings save into ~/SampleConfs"
 echo "all done!"
 echo "restarting system"
