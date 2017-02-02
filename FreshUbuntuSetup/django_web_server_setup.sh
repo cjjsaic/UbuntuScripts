@@ -10,13 +10,10 @@ cd ~
 sudo mkdir .pip
 cd .pip
 pip_config_file="pip.cnf"
-<<<<<<< HEAD
 
 if [ -f ${pip_config_file} ]
 then
-=======
 if [ -f ${pip_config_file} ]; then
->>>>>>> 9adf6e0e8fcc08c3d7cd94b09becaaab59a86aa0
 	echo "pip.cnf aleady exist."
 	:> ${pip_config_file}
 	echo "[global]" >> ${pip_config_file}
@@ -49,16 +46,11 @@ sudo apt install supervisor
 # download sample gunicorn conf and supervisor conf and nginx conf to ~/SampleConfs
 cd ~
 sudo mkdir SampleConfs
-<<<<<<< HEAD
 cd SampleConfs
-wget https://github.com/jinfagang/UbuntuScripts/blob/master/FreshUbuntuSetup/sample_confs/sample_gunicorn.conf
-wget https://github.com/jinfagang/UbuntuScripts/blob/master/FreshUbuntuSetup/sample_confs/sample_supervisor.conf
-wget https://github.com/jinfagang/UbuntuScripts/blob/master/FreshUbuntuSetup/sample_confs/sample_nginx
-=======
+
 wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_gunicorn.conf
 wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_supervisor.conf
 wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_nginx
->>>>>>> 9adf6e0e8fcc08c3d7cd94b09becaaab59a86aa0
 echo "settings save into ~/SampleConfs"
 
 
