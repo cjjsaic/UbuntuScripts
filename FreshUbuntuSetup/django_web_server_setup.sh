@@ -50,10 +50,11 @@ sudo apt install supervisor
 # download sample gunicorn conf and supervisor conf and nginx conf to ~/SampleConfs
 cd ~
 sudo mkdir SampleConfs
+sudo chmod -R 777 SampleConfs
 cd SampleConfs
-wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_gunicorn.conf
-wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_supervisor.conf
-wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_nginx
+sudo wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_gunicorn.conf
+sudo wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_supervisor.conf
+sudo wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_nginx
 echo "settings save into ~/SampleConfs"
 echo "all done!"
 echo "restarting system"
