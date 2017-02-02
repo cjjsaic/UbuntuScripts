@@ -34,6 +34,7 @@ echo "pip conf file established success!"
 # install oh-my-zsh
 sudo apt install curl
 sudo apt install wget
+sudo apt install zsh
 sudo curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 sudo chsh -s /bin/zsh
 
