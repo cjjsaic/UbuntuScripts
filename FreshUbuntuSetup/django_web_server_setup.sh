@@ -47,4 +47,10 @@ wget https://github.com/jinfagang/UbuntuScripts/blob/master/FreshUbuntuSetup/sam
 wget https://github.com/jinfagang/UbuntuScripts/blob/master/FreshUbuntuSetup/sample_confs/sample_supervisor.conf
 wget https://github.com/jinfagang/UbuntuScripts/blob/master/FreshUbuntuSetup/sample_confs/sample_nginx
 echo "settings save into ~/SampleConfs"
+
+
 echo "all done!"
+echo "restarting system"
+sudo reboot
+
+
