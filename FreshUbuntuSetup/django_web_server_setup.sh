@@ -10,14 +10,16 @@ cd ~
 sudo mkdir .pip
 cd .pip
 pip_config_file="pip.cnf"
-if [ -f ${pip_config_file} ]; then:
+
+if [ -f ${pip_config_file} ]
+then
 	echo "pip.cnf aleady exist."
 	:> ${pip_config_file}
 	echo "[global]" >> ${pip_config_file}
 	echo "index-url = https://pypi.tuna.tsinghua.edu.cn/simple" >> ${pip_config_file}
 	echo "[install]" >> ${pip_config_file}
 	echo "trusted-host=mirrors.aliyun.com" >> ${pip_config_file}
-else:
+else
 	echo "[global]" >> ${pip_config_file}
 	echo "index-url = https://pypi.tuna.tsinghua.edu.cn/simple" >> ${pip_config_file}
 	echo "[install]" >> ${pip_config_file}
@@ -43,6 +45,7 @@ sudo apt install supervisor
 # download sample gunicorn conf and supervisor conf and nginx conf to ~/SampleConfs
 cd ~
 sudo mkdir SampleConfs
+cd SampleConfs
 wget https://github.com/jinfagang/UbuntuScripts/blob/master/FreshUbuntuSetup/sample_confs/sample_gunicorn.conf
 wget https://github.com/jinfagang/UbuntuScripts/blob/master/FreshUbuntuSetup/sample_confs/sample_supervisor.conf
 wget https://github.com/jinfagang/UbuntuScripts/blob/master/FreshUbuntuSetup/sample_confs/sample_nginx
