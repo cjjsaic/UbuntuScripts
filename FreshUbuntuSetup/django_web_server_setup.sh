@@ -10,14 +10,14 @@ cd ~
 sudo mkdir .pip
 cd .pip
 pip_config_file="pip.cnf"
-if [ -f ${pip_config_file} ]; then:
+if [ -f ${pip_config_file} ]; then
 	echo "pip.cnf aleady exist."
 	:> ${pip_config_file}
 	echo "[global]" >> ${pip_config_file}
 	echo "index-url = https://pypi.tuna.tsinghua.edu.cn/simple" >> ${pip_config_file}
 	echo "[install]" >> ${pip_config_file}
 	echo "trusted-host=mirrors.aliyun.com" >> ${pip_config_file}
-else:
+else
 	echo "[global]" >> ${pip_config_file}
 	echo "index-url = https://pypi.tuna.tsinghua.edu.cn/simple" >> ${pip_config_file}
 	echo "[install]" >> ${pip_config_file}
