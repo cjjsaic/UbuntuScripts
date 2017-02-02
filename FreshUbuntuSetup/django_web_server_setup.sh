@@ -35,20 +35,23 @@ sudo apt install zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 sudo chsh -s /bin/zsh
 
+# install nginx and supervisor and postgresql
+sudo apt install nginx
+sudo apt install supervisor
+sudo apt install postgresql
+sudo apt install libpq-dev
+
 # install python3 packages
 sudo pip3 install django
 sudo pip3 install gunicore
 sudo pip3 install psycopg2
 sudo pip3 install djangorestframework
 
-# install nginx and supervisor
-sudo apt install nginx
-sudo apt install supervisor
+
 
 # download sample gunicorn conf and supervisor conf and nginx conf to ~/SampleConfs
 cd ~
-sudo mkdir SampleConfs
-sudo chmod -R 777 SampleConfs
+mkdir SampleConfs
 cd SampleConfs
 wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_gunicorn.conf
 wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_supervisor.conf
