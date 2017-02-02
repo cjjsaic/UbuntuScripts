@@ -6,14 +6,13 @@ sudo apt update
 sudo apt install python3-pip
 
 # change pip source to tsinghua mirror
-cd ~
-sudo mkdir .pip
-cd .pip
-pip_config_file="pip.cnf"
+pip_config_file=${HOME}"/.pip/pip.cnf"
+pip_dir=${HOME}"/.pip"
+echo ${pip_config_file}
 
 if [ -f ${pip_config_file} ]
 then
-if [ -f ${pip_config_file} ]; then
+	sudo chmod -R 777 ${pip_dir}
 	echo "pip.cnf aleady exist."
 	:> ${pip_config_file}
 	echo "[global]" >> ${pip_config_file}
@@ -21,11 +20,16 @@ if [ -f ${pip_config_file} ]; then
 	echo "[install]" >> ${pip_config_file}
 	echo "trusted-host=mirrors.aliyun.com" >> ${pip_config_file}
 else
+	sudo mkdir ${pip_dir}
+	sudo chmod -R 777 ${pip_dir}
+	sudo touch ${pip_config_file}
+	sudo chmod -R 777 ${pip_config_file}
 	echo "[global]" >> ${pip_config_file}
 	echo "index-url = https://pypi.tuna.tsinghua.edu.cn/simple" >> ${pip_config_file}
 	echo "[install]" >> ${pip_config_file}
 	echo "trusted-host=mirrors.aliyun.com" >> ${pip_config_file}
 fi
+echo "pip conf file established success!"
 
 # install oh-my-zsh
 sudo apt install curl
@@ -47,15 +51,10 @@ sudo apt install supervisor
 cd ~
 sudo mkdir SampleConfs
 cd SampleConfs
-
 wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_gunicorn.conf
 wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_supervisor.conf
 wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_nginx
 echo "settings save into ~/SampleConfs"
-
-
 echo "all done!"
 echo "restarting system"
 sudo reboot
-
-
