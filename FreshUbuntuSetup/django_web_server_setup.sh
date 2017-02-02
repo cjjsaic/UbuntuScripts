@@ -27,8 +27,8 @@ fi
 # install oh-my-zsh
 sudo apt install curl
 sudo apt install wget
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-chsh -s /bin/zsh
+sudo curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+sudo chsh -s /bin/zsh
 
 # install python3 packages
 sudo pip3 install django
