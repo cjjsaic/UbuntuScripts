@@ -41,11 +41,15 @@ sudo apt install supervisor
 sudo apt install postgresql
 sudo apt install libpq-dev
 
+# fix tencent-cloud issue
+export LC_ALL=C
+
 # install python3 packages
 sudo pip3 install django
 sudo pip3 install gunicore
 sudo pip3 install psycopg2
 sudo pip3 install djangorestframework
+sudo pip3 install pillow
 
 
 

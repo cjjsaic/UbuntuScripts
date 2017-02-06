@@ -1,0 +1,34 @@
+                       List of relations
+ Schema |               Name                |   Type   | Owner 
+--------+-----------------------------------+----------+-------
+ public | activity_activity                 | table    | root
+ public | activity_activity_id_seq          | sequence | root
+ public | activity_activityenroll           | table    | root
+ public | activity_activityenroll_id_seq    | sequence | root
+ public | activity_activitypicture          | table    | root
+ public | activity_activitypicture_id_seq   | sequence | root
+ public | auth_group                        | table    | root
+ public | auth_group_id_seq                 | sequence | root
+ public | auth_group_permissions            | table    | root
+ public | auth_group_permissions_id_seq     | sequence | root
+ public | auth_permission                   | table    | root
+ public | auth_permission_id_seq            | sequence | root
+ public | auth_user                         | table    | root
+ public | auth_user_groups                  | table    | root
+ public | auth_user_groups_id_seq           | sequence | root
+ public | auth_user_id_seq                  | sequence | root
+ public | auth_user_user_permissions        | table    | root
+ public | auth_user_user_permissions_id_seq | sequence | root
+ public | django_admin_log                  | table    | root
+ public | django_admin_log_id_seq           | sequence | root
+ public | django_content_type               | table    | root
+ public | django_content_type_id_seq        | sequence | root
+ public | django_migrations                 | table    | root
+ public | django_migrations_id_seq          | sequence | root
+ public | django_session                    | table    | root
+ public | findlove_candidate                | table    | root
+ public | findlove_candidate_id_seq         | sequence | root
+ public | findlove_candidatephoto           | table    | root
+ public | findlove_candidatephoto_id_seq    | sequence | root
+(29 rows)
+
