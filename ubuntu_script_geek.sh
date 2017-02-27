@@ -5,7 +5,6 @@ sudo apt update
 sudo apt install fcitx
 sudo apt -f install
 sudo apt install fcitx-config-gtk 
-sudo apt install fcitx-table-all
 sudo apt install im-switch
 echo "=========installing googlepinyin input method=========="
 sudo apt install fcitx-googlepinyin
@@ -16,15 +15,6 @@ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key a
 sudo apt update
 sudo apt install google-chrome-stable
 
-echo "=========setting up python3 library=========="
-sudo apt update
-sudo apt install python3-pip
-sudo pip3 install --upgrade pip
-sudo pip3 install numpy
-sudo pip3 install scipy
-sudo pip3 install matplotlib
-sudo pip3 install pandas
-
 echo "=========installing ssh and git=========="
 sudo apt update
 sudo apt install openssh-server
@@ -32,7 +22,6 @@ sudo apt install git
 
 echo "=========installing zsh-a beautiful terminal=========="
 sudo apt install zsh
-sudo chzh -s /usr/local/zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "=========installing shadowsocks-qt5-Break Wall!=========="
@@ -48,17 +37,15 @@ sudo apt install plank
 cd ~
 mkdir .pip
 cd .pip
+wget https://github.com/jinfagang/UbuntuScripts/raw/master/confs/pip.conf
+cd ..
+sudo chmod -R 777 .pip
 # install unity tweak tool
 sudo apt install unity-tweak-tool
 # set themes and tweak style like magic close window effect
 
 # install plank
 sudo apt install plank
-
-# install sublime
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
-sudo apt-get update 
-sudo apt-get install sublime-text-installer
 
 ## nemo file explorer
 sudo add-apt-repository ppa:webupd8team/nemo
@@ -74,6 +61,22 @@ sudo apt-get install numix-gtk-theme
 sudo apt-get install numix-icon-theme-circle  
 sudo add-apt-repository ppa:noobslab/icons  
 sudo apt-get update  
-sudo apt-get install ultra-flat-icons 
+sudo apt-get install ultra-flat-icons
+
+echo "=========setting up python3 library=========="
+sudo apt update
+sudo apt install python3-pip
+sudo pip3 install --upgrade pip
+sudo pip3 install scipy
+sudo pip3 install matplotlib
+sudo pip3 install pandas
+sudo pip3 install keras
+sudo pip3 install skimage
+
+# install sublime
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update 
+sudo apt-get install sublime-text-installer
 
 echo "All Done! Congratulations! Enjoy your Ubuntu!"
+echo "Please manually reboot your system now!"
