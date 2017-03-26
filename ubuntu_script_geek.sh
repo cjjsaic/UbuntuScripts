@@ -20,10 +20,6 @@ sudo apt update
 sudo apt install openssh-server
 sudo apt install git
 
-echo "=========installing zsh-a beautiful terminal=========="
-sudo apt install zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 echo "=========installing shadowsocks-qt5-Break Wall!=========="
 sudo add-apt-repository ppa:hzwhuang/ss-qt5
 sudo apt-get update
@@ -77,6 +73,10 @@ sudo pip3 install skimage
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
 sudo apt-get update 
 sudo apt-get install sublime-text-installer
+
+echo "=========installing zsh-a beautiful terminal=========="
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "All Done! Congratulations! Enjoy your Ubuntu!"
 echo "Please manually reboot your system now!"
