@@ -67,12 +67,8 @@ sudo pip3 install scipy
 sudo pip3 install matplotlib
 sudo pip3 install pandas
 sudo pip3 install keras
-sudo pip3 install skimage
+sudo pip3 install scikit-image
 
-# install sublime
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
-sudo apt-get update 
-sudo apt-get install sublime-text-installer
 
 echo "=========installing zsh-a beautiful terminal=========="
 sudo apt install zsh
