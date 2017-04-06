@@ -63,4 +63,11 @@ wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/samp
 echo "settings save into ~/SampleConfs"
 echo "all done!"
 echo "restarting system"
+
+# install imgcat to view image in terminal
+cd ~
+wget https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgcat
+mv imgcat /usr/local/bin
+echo "alias imgcat='bash /usr/local/bin/imgcat'" >> ~/.zshrc && source ~/.zshrc
+
 sudo reboot
