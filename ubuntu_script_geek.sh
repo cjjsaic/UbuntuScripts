@@ -73,6 +73,11 @@ sudo pip3 install scikit-image
 echo "=========installing zsh-a beautiful terminal=========="
 sudo apt install zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo "=========install imgcat================="
+wget https://github.com/jinfagang/UbuntuScripts/raw/master/ShellRepo/imgcat
+sudo mv imgcat /usr/local/bin/
+echo 'alias imgcat="bash /usr/local/bin/imgcat"' >> ~/.zshrc
+source ~/.zshrc
 
 echo "All Done! Congratulations! Enjoy your Ubuntu!"
 echo "Please manually reboot your system now!"
