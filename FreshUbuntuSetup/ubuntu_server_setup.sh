@@ -14,13 +14,6 @@ echo "---- updating system ----"
 sudo apt update
 sudo apt install python3-pip
 
-echo "---- install oh-my-zsh ----"
-# install oh-my-zsh
-sudo apt install curl
-sudo apt install wget
-sudo apt install zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 echo "---- install install nginx and supervisor and postgresql ----"
 # install nginx and supervisor and postgresql
 sudo apt install nginx
@@ -51,6 +44,10 @@ wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/samp
 wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_supervisor.conf
 wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/lewisjin_nginx
 echo "settings save into ~/SampleConfs"
-echo "all done!"
-echo "restarting system"
-sudo reboot
+
+echo "---- install oh-my-zsh ----"
+# install oh-my-zsh
+sudo apt install curl
+sudo apt install wget
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
