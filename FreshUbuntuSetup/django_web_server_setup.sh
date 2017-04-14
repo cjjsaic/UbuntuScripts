@@ -42,7 +42,7 @@ sudo apt install postgresql
 sudo apt install libpq-dev
 
 # fix tencent-cloud issue
-export LC_ALL=C
+# export LC_ALL=C
 
 # install python3 packages
 sudo pip3 install django
