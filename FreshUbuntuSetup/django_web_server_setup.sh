@@ -50,7 +50,8 @@ sudo pip3 install gunicore
 sudo pip3 install psycopg2
 sudo pip3 install djangorestframework
 sudo pip3 install pillow
-
+sudo pip3 install qiniu
+sudo pip3 install numpy
 
 
 # download sample gunicorn conf and supervisor conf and nginx conf to ~/SampleConfs
