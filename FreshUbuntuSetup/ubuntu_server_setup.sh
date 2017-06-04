@@ -20,6 +20,7 @@ sudo apt install nginx
 sudo apt install supervisor
 sudo apt install postgresql
 sudo apt install libpq-dev
+sudo apt install axel
 
 
 echo "---- install python3 packages ----"
@@ -44,6 +45,9 @@ wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/samp
 wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/sample_supervisor.conf
 wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/sample_confs/lewisjin_nginx
 echo "settings save into ~/SampleConfs"
+
+echo "---- install Golang ------"
+axel -n 50 https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz
 
 echo "---- install oh-my-zsh ----"
 # install oh-my-zsh
