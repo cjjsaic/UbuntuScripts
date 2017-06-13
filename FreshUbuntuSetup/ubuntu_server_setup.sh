@@ -47,8 +47,8 @@ wget https://github.com/jinfagang/UbuntuScripts/raw/master/FreshUbuntuSetup/samp
 echo "settings save into ~/SampleConfs"
 
 echo "---- install Golang ------"
-axel -n 50 https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz
-
+#axel -n 50 https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz
+sudo apt install golang-1.8-go
 echo "---- install oh-my-zsh ----"
 # install oh-my-zsh
 sudo apt install curl
