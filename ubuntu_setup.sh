@@ -69,6 +69,9 @@ sudo pip3 install pandas
 sudo pip3 install keras
 sudo pip3 install scikit-image
 
+echo "============ installing Oracle Java8 =================="
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update; sudo apt install oracle-java8-installer
 
 echo "=========installing zsh-a beautiful terminal=========="
 sudo apt install zsh
