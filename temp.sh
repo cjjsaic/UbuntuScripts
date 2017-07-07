@@ -1,21 +1,3 @@
-#!/bin/bash
-echo "=========installing Chinese input source=========="
-sudo add-apt-repository ppa:fcitx-team/nightly  
-sudo apt update
-sudo apt install fcitx
-sudo apt -f install
-sudo apt install fcitx-config-gtk 
-sudo apt install im-switch
-echo "=========installing googlepinyin input method=========="
-sudo apt install fcitx-googlepinyin
-
-echo "=========installing google-chrome-stable=========="
-# some times this line con not get
-#sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/
-#wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add -
-#sudo apt update
-#sudo apt install google-chrome-stable
-
 echo "=========installing ssh and git=========="
 sudo apt update
 sudo apt install openssh-server
