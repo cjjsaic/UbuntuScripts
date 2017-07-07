@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# before install, must install opencv3.2 which is now the latest version.
+# and the cudnn
 cd ~
 git clone https://github.com/BVLC/caffe.git
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev libhdf5-serial-dev libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler libopenblas-dev
