@@ -20,6 +20,9 @@ echo "=========installing ssh and git=========="
 sudo apt update
 sudo apt install openssh-server
 sudo apt install git
+sudo apt install curl
+sudo apt install axel
+sudo apt install wget
 
 echo "=========installing shadowsocks-qt5-Break Wall!=========="
 sudo add-apt-repository ppa:hzwhuang/ss-qt5
