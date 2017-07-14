@@ -77,6 +77,15 @@ echo "============ installing Oracle Java8 =================="
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt update; sudo apt install oracle-java8-installer
 
+echo "============ update cmake to a high level 3.8 ========="
+wget https://cmake.org/files/v3.8/cmake-3.8.2.tar.gz
+tar -xvf cmake-3.8.2.tar.gz
+cd cmake-3.8.2
+./bootstrap
+make -j8
+sudo make install
+
+
 echo "=========installing zsh-a beautiful terminal=========="
 sudo apt install zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
