@@ -9,7 +9,7 @@ CONVERT=" iconv  -f   $FROM_ENCODING  -t   $TO_ENCODING"
 for  file  in  `ls`; do
     if [ ${file##*.} = "txt" ]; then
         echo $file
-        $CONVERT   "$file"   >  "${file}"
+        $CONVERT   "$file"   >  "${file}.utf8"
     fi
 done
 exit 0
